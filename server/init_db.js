@@ -108,14 +108,14 @@ insertLS.run(5, 14, 4);
 const insertEvent = db.prepare('INSERT OR IGNORE INTO events (id, description, effect) VALUES (?, ?, ?)');
 insertEvent.run(1, 'Quiet journey', 0);
 insertEvent.run(2, 'Wrong platform', -2);
-insertEvent.run(3, 'Kind passenger gave you directions', 1);
-insertEvent.run(4, 'Train delayed, you missed a connection', -3);
-insertEvent.run(5, 'Found a coin on the seat', 2);
-insertEvent.run(6, 'Ticket inspector fined you', -4);
-insertEvent.run(7, 'Helped a tourist, rewarded with coins', 3);
-insertEvent.run(8, 'Express train, arrived early', 4);
-insertEvent.run(9, 'Crowded carriage, very uncomfortable', -1);
-insertEvent.run(10, 'Friendly conductor gave a tip', 1);
+insertEvent.run(3, 'Kind passenger', 1);
+insertEvent.run(4, 'Missed connection', -3);
+insertEvent.run(5, 'Found coins on the seat', 2);
+insertEvent.run(6, 'No ticket, conductor fine', -4);
+insertEvent.run(7, 'Helped tourist', 3);
+insertEvent.run(8, 'Express train', 4);
+insertEvent.run(9, 'Train delayed', -1);
+insertEvent.run(10, 'Friendly conductor', 1);
 
 // Users (password: "password" for all)
 function hashPassword(password) {
