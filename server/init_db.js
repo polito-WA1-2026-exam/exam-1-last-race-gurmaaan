@@ -126,13 +126,13 @@ function hashPassword(password) {
 
 const insertUser = db.prepare('INSERT OR IGNORE INTO users (id, username, password, salt) VALUES (?, ?, ?, ?)');
 
-const u1 = hashPassword('password');
+const u1 = hashPassword('alice123');
 insertUser.run(1, 'alice', u1.hash, u1.salt);
 
-const u2 = hashPassword('password');
+const u2 = hashPassword('bob456');
 insertUser.run(2, 'bob', u2.hash, u2.salt);
 
-const u3 = hashPassword('password');
+const u3 = hashPassword('carol789');
 insertUser.run(3, 'carol', u3.hash, u3.salt);
 
 // Games for alice and bob (already played some games)
